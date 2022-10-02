@@ -1,0 +1,23 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatoRaymond-FS/asl-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CatoRaymond-FS/asl-project/issues"
+  },
+  "homepage": "https://github.com/CatoRaymond-FS/asl-project#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
