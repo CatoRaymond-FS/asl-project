@@ -1,5 +1,5 @@
 let products = [
-    {id: "1", "slug" : "nike-shoes", "name": "Nike Shoes", "price": 100, "description": "Nike Shoes"},
+    {id: "1", "slug" : "nike-shoe", "name": "Nike Shoe"}
 ]
 
 const all = () => {
@@ -7,7 +7,7 @@ const all = () => {
 }
 
 const find = (id) => {
-    return products.find(p.id === id)
+    return products.find(p => p.id === id)
 }
 
 const create = (product) => {
