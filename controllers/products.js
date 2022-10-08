@@ -1,7 +1,7 @@
 const Products = require('../models/products')
 const index = (req, res) => {
     const products = Products.all()
-    res.json(products)
+    res.render('views/products/index', { products})
 }
 
 const form = (req, res) => {
@@ -10,7 +10,7 @@ const form = (req, res) => {
 
 const show = (req, res) => {
     const product = Products.find(req.params.id)
-    res.json(product)
+    res.render('views/products/show', { product })
 }
 
 const create = (req, res) => {
