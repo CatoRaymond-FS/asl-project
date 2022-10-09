@@ -5,7 +5,13 @@ const index = (req, res) => {
 }
 
 const form = (req, res) => {
-    res.send('Products.form')
+    //res.send('Products.form')
+    if (req.params.id) {
+        const product = Products.find(req.params.id)
+        res.render('views/products/edit', { product })
+    } else {
+        res.render('views/products/create')
+    }
 }
 
 const show = (req, res) => {
@@ -15,17 +21,17 @@ const show = (req, res) => {
 
 const create = (req, res) => {
     const product = Products.create(req.body)
-    res.json(product)
+    res.redirect('/products/' + product.id)
 }
 
 const update = (req, res) => {
     const product = Products.update(req.params.id, req.body)
-    res.json(product)
+    res.redirect('/products/' + req.params.id)
 }
 
 const remove = (req, res) => {
-    const product = Products.remove(req.params.id)
-    res.json(product)
+    Products.remove(req.params.id)
+    res.redirect('/products/index')
 }
 
 
