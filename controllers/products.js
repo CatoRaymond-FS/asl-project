@@ -31,7 +31,7 @@ const update = (req, res) => {
 
 const remove = (req, res) => {
     Products.remove(req.params.id)
-    res.redirect('/products/index')
+    res.redirect('/products/')
 }
 
 
