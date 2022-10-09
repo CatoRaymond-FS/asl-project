@@ -1,5 +1,7 @@
 let products = [
-    {id: "1", "slug" : "nike-shoe", "name": "Nike Shoe"}
+    {id: "1", "slug" : "nike-shoes", "name": "Nike Shoes", "price": 100, "description": "Nike Shoes"},
+    {id: "2", "slug" : "adidas-shoes", "name": "Adidas Shoes", "price": 200, "description": "Adidas Shoes"},
+    {id: "3", "slug" : "puma-shoes", "name": "Puma Shoes", "price": 300, "description": "Puma Shoes"},
 ]
 
 const all = () => {
@@ -11,8 +13,9 @@ const find = (id) => {
 }
 
 const create = (product) => {
-    products.push(product)
-    return products
+    const id = Number(products[products.length - 1].id) + 1 + ""
+    products.push({ id, ...product })
+    return products[products.length - 1]
 }
 
 const update = (id, product) => {
@@ -23,7 +26,7 @@ const update = (id, product) => {
 }
 
 const remove = (id) => {
-    products = products.filter(p => p.id !== id)
+    products = products.filter(p => p.id != id)
     return products
 }
 
