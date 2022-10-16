@@ -16,7 +16,7 @@
             <label>Description: </label>{{ product.description }}
         </li>
         <li>
-            <label>Published: </label>{{ product.is_published }}
+            <label>Active: </label>{{ product.is_active ? 'Yes' : 'No' }}
         </li>
         <li>
             <label>Slug: </label>{{ product.slug }}

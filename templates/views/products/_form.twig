@@ -15,6 +15,12 @@
         <textarea name="description" id="description">{{ product.description }}</textarea>
     </div>
     <div>
+        <!--if product is checked it is active: yes if product is not checked it is active: no-->
+        <label for="is_active">Active:</label>
+        <input type="checkbox" name="is_active" id="is_active" {% if product.is_active %}checked{% endif %} />
+        
+    </div>
+    <div>
         <label for="slug">Slug:</label>
         <input type="text" name="slug" id="slug" value="{{ product.slug }}" />
     </div>
