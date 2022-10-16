@@ -22,6 +22,15 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      description: {
+        type: Sequelize.TEXT('long')
+      },
+      slug: {
+        type: Sequelize.STRING
+      },
+      is_published: {
+        type: Sequelize.BOOLEAN
       }
     });
   },
