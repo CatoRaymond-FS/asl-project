@@ -2,29 +2,29 @@
     {% if product.id %}
         <input type="hidden" name="id" value="{{ product.id }}">
     {% endif %}
-    <div>
-        <label for="title">Name:</label>
+    <div class="divList">
+        <label for="title" class="label">Name:</label>
         <input type="text" name="title" id="title" value="{{ product.title }}" />
     </div>
-    <div>
-        <label for="price">Price:</label>
+    <div class="divList">
+        <label for="price" class="label">Price:</label>
         <input type="number" max="2000" min="0" name="price" id="price" value="{{ product.price }}" />
     </div>
-    <div>
-        <label for="description">Description:</label>
+    <div class="divList">
+        <label for="description" class="label">Description:</label>
         <textarea name="description" id="description">{{ product.description }}</textarea>
     </div>
-    <div>
+    <div class="divList">
         <!--if product is checked it is active: yes if product is not checked it is active: no-->
-        <label for="is_active">Active:</label>
+        <label for="is_active" class="label">Active:</label>
         <input type="checkbox" name="is_active" id="is_active" {% if product.is_active %}checked{% endif %} />
         
     </div>
-    <div>
-        <label for="slug">Slug:</label>
+    <div class="divList">
+        <label for="slug" class="label">Slug:</label>
         <input type="text" name="slug" id="slug" value="{{ product.slug }}" />
     </div>
-    <div>
-        <input type="submit" type="submit">
+    <div class="divList">
+        <input type="submit" type="submit" class="submitButton">
     </div>
 </form>
