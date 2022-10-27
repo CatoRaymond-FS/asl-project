@@ -2,16 +2,16 @@
     {% if variant.id %}
         <input type="hidden" name="id" value="{{ variant.id }}">
     {% endif %}
-    <div>
-        <label for="title">Title:</label>
+    <div class="divList">
+        <label for="title" class="label">Title:</label>
         <input type="text" name="title" id="title" value="{{ variant.title }}" />
     </div>
-    <div>
-        <label for="price">Price:</label>
+    <div class="divList">
+        <label for="price" class="label">Price:</label>
         <input type="number" max="2000" min="0" name="price" id="price" value="{{ variant.price }}" />
     </div>
-    <div>
-        <label>Product:</label>
+    <div class="divList">
+        <label class="label">Product:</label>
         <select name="productId">
             {% for product in products %}
                 <option value="{{ product.id }}"
@@ -22,18 +22,18 @@
             {% endfor %}
         </select>
     </div>
-    <div>
-        <label for="description">Description:</label>
+    <div class="divList">
+        <label for="description" class="label">Description:</label>
         <textarea name="description" id="description">{{ variant.description }}</textarea>
     </div>
-    <div>
-        <label for="inventory">Inventory:</label>
+    <div class="divList">
+        <label for="inventory" class="label">Inventory:</label>
         <input type="number" max="2000" min="0" name="inventory" id="inventory" value="{{ variant.inventory }}" />
     </div>
-    <div>
-        <label for="slug">Slug:</label>
+    <div class="divList">
+        <label for="slug" class="label">Slug:</label>
         <input type="text" name="slug" id="slug" value="{{ variant.slug }}" />
-    <div>
+    <div class="divList">
         <input type="submit" type="submit">
     </div>
 </form>

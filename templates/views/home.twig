@@ -1,16 +1,40 @@
 {% extends "../layouts/base.twig" %}
 
 {% block main_content %}
+<section class="p-2 flex justify-center bg-violet-200">
+    <h1 class="text-2xl text-gray-700">Rey's Retro Games</h1>
+</section>
 
-<h1>Manage</h1>
-<nav>
-    <ul>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/variants">Variants</a></li>
-        <li><a href="/images">Images</a></li>
+<section class="bg-violet-200 text-xl text-gray-500">
+    <div class="flex justify-center">
+        <h1 class="">Manage</h1>
+    </div>
+    <nav class="nav">
+        <ul class="homeList flex justify-center">
+            <li class="p-2 hover:text-black hover:text-2xl"><a href="/products">Products</a></li>
+            <li class="p-2 hover:text-black hover:text-2xl"><a href="/variants">Variants</a></li>
+            <li class="p-2 hover:text-black hover:text-2xl"><a href="/images">Images</a></li>
+        </ul>
+    </nav>
+</section>
 
-    </ul>
-</nav>
+<!--TODO: Figure out why these images are broken-->
+<section class="flex justify-center">
+    <div class="p-4 px-6">
+        <a href="/products/1">
+            <h1 class="py-4 text-xl hover:text-2xl ">Sony Playstation Portable</h1>
+            <img src="../../public/images/5.jpeg" alt="Sony Playstation Portable">
+        </a>
+    </div>
+    <div class="p-4 px-6">
+        <a href="/products/2">
+            <h1 class=" py-4 text-xl hover:text-2xl">Nintendo DS Lite</h1>
+            <img src="../../public/images/4.png" alt="Nintendo DS Lite">
+        </a>
+    </div>
+</section>
+
+
 {% endblock %}
 
 
