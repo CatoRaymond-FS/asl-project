@@ -1,7 +1,7 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-    <h2 class="prodTitle">About {{ product.title }}</h2>
+    <h2 class="text xl">About {{ product.title }}</h2>
     <ul class="homeList">
         <li>
             <label class="label">ID: </label>{{ product.id }}
@@ -20,7 +20,7 @@
         </li>
         <li>
             <label class="label">Slug: </label>{{ product.slug }}
-        
+        </li>
     </ul>
     <p>
         <a href="/products/{{ product.id }}/edit">Edit</a> | <a href="/products/{{ product.id }}/delete">Delete</a>
